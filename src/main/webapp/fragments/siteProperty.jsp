@@ -1,0 +1,11 @@
+<%--page directive --%>
+<%@page import="siteProperty.SiteProperty"%>
+<%@page import="siteProperty.SitePropertyVO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+SitePropertyVO spVO = SiteProperty.spVO;
+application.setAttribute("SiteProperty", spVO);
+application.setAttribute("CommonURL", spVO.getProtocol()+spVO.getServer_name()+spVO.getContext_root());
+%>
